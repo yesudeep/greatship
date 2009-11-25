@@ -31,9 +31,8 @@ from os.path import dirname, abspath, realpath, join as path_join
 
 DIR_PATH = abspath(dirname(realpath(__file__)))
 EXTRA_LIB_PATH = [
-    path_join(DIR_PATH, 'lib'),
     path_join(DIR_PATH, 'appengine'),
-    path_join(DIR_PATH, 'lib', 'libs.zip'),
+    path_join(DIR_PATH, 'gaeutilities'),
     dirname(DIR_PATH),
 ]
 sys.path = EXTRA_LIB_PATH + sys.path
