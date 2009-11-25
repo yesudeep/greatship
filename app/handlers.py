@@ -24,22 +24,24 @@
 # THE SOFTWARE.
 
 import configuration
+from gaefy.db.datastore_cache import DatastoreCachingShim
 from google.appengine.ext import db, webapp
 from google.appengine.api import memcache
 from google.appengine.ext.webapp.util import run_wsgi_app
-
+from utilities import render_template
 import logging
 
+# Set up logging.
 logging.basicConfig(level=logging.DEBUG)
 
-
+# Handlers
 class IndexHandler(webapp.RequestHandler):
     """Handles the home page requests."""
     def get(self):
         response = render_template('index.html')
         self.response.out.write(response)
 
-# URL to request handler mappings.
+# URL-to-request-handler mappings.
 urls = (
     ('/', IndexHandler),
 )
@@ -47,7 +49,6 @@ urls = (
 # Web application entry-point.
 def main():
     application = webapp.WSGIApplication(urls, debug=configuration.DEBUG)
-    from gaefy.db.datastore_cache import DatastoreCachingShim
     DatastoreCachingShim.Install()
     run_wsgi_app(application)
     DatastoreCachingShim.Uninstall()
