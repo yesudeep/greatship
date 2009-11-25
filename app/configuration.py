@@ -33,6 +33,7 @@ DIR_PATH = abspath(dirname(realpath(__file__)))
 EXTRA_LIB_PATH = [
     path_join(DIR_PATH, 'appengine'),
     path_join(DIR_PATH, 'gaeutilities'),
+    path_join(DIR_PATH, 'jinja2'),
     dirname(DIR_PATH),
 ]
 sys.path = EXTRA_LIB_PATH + sys.path
