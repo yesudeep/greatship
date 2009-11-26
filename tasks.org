@@ -1,6 +1,6 @@
 # emacs org-mode
 
-* TODO Migration of devserver.py based project to the new FOSS puppy project. [3/3]
+* TODO Migration of devserver.py based project to the new puppy meta-framework. [3/3]
   - [X] Set up a ticket tracker and git repository online (github).
   - [X] Merge sconscripts to new format.
   - [X] Puppy needs to be updated to use the Google closure library and compiler for JS optimization.
