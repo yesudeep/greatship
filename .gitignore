@@ -4,7 +4,7 @@
 *.bak
 *.swp
 *.log
-\#*
+\#*\#
 .sconsign.dblite
 
 # Mac OS X temporary files.
