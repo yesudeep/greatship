@@ -62,3 +62,4 @@ render_template = render_template_generator()
 
 # Conveninence wrapper to make sure int conversion uses a decimal base. 
 dec = partial(int, base=10)
+
