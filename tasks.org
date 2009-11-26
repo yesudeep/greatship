@@ -1,0 +1,133 @@
+# emacs org-mode
+
+* DONE Migration of devserver.py based project to the new puppy meta-framework. [3/3]
+  - [X] Set up a ticket tracker and git repository online (github).
+  - [X] Merge sconscripts to new format.
+  - [X] Puppy needs to be updated to use the Google closure library and
+    compiler for JS optimization.
+
+* TODO Migration of existing Django backend code to Google App Engine codebase. [1/2]
+  - [ ] Convert all the templates to use Jinja2 (runtime) and Cheetah
+    (build-time).
+  - [X] Use HTML 5 for the rendering engine.
+
+* TODO Setup services: [4/10]
+  - [X] Setup a dropbox account to serve all static files (dropbox does not
+    use mod-gzip to compress static media--may be we should retain one
+    server to serve all the static files?).
+  - [X] Setup an application identifier on appengine.google.com
+  - [ ] Map the application identifier to greatshipglobal.com as a domain.
+  - [ ] Configure DNS to use ghs.google.com. as a cname alias for the www
+    subdomain.
+  - [ ] Configure DNS to use dl.dropbox.com. as a cname alias for the
+    static/assets subdomain. (we might retain existing mappings if we think
+    performance is not achievable using dropbox since we already have a
+    static server in place)
+  - [ ] If we decide on using the existing static server (tank) the machine
+    will need to be upgraded to the latest revision of linux, so we set up
+    a temporary mapping for assets.greatshipglobal.com to point to
+    dl.dropbox.com. and push media on there.  Perform server maintenance
+    and backport media to it resetting static subdomain to be
+    static.greatshipglobal.com.
+  - [ ] Automated mail services will not be available if google apps is not
+    used (ask whether greatship would like to migrate mail to Google Apps).
+  - [ ] Obtain shared api keys for recaptcha.net for use with forms on the
+    Website (captchas can be hard to get right for people with low
+    vision--mention this)
+  - [X] Register analytics accounts with google analytics (daily), woopra
+    (RT), and getclicky (RT).
+  - [X] Include git submodules [2/2]
+        - [X] chickoojs (common script libraries),
+        - [X] haggoo (in house python library for integration with GAE).
+
+* TODO Rewrite of the code to use the latest library optimizations. [2/14]
+  - [X] jQuery 1.3.2 and jQuery Tools 1.1.2 are available from a CDN so use
+        those for the production server.  Reduces load on our servers and
+        improves edge performance to load the Website.
+  - [ ] Images are currently not stitched so css sprites are not in use.
+    Combine images to reduce the number of HTTP requests.
+  - [ ] Rewrite the stylesheets using SASS so that CSS can be generate and
+    we can use mixins to increase compatibility with Internet Explorer
+    versions.
+  - [X] The original git repository stored binary source files for all
+    images and that made the size of the repository huge.  We now have a
+    new policy to not store any binary source image formats, which should
+    keep the repo sizes in check.  So remove all binary source image
+    formats (psd, xpm, pxm, ai) but please retain text based source image
+    formats (svg, xml, eps, pdf)
+  - [ ] Consider including typekit for custom font rendering (this was not
+    available during the initial development and can improve font rendering
+    for all supported browsers).
+  - [ ] Run a check for inconsistent and slow styles in Google Page Speed
+    to ensure performance.
+  - [ ] Certain scripts in the current website do not use minification for
+    the scripts.  We'll be moving to YUI compressor minified js files for
+    the front end and Closure Compiler for the CMS.
+  - [ ] A lot of icons in the repository are simply lying around.  Remove
+    the unnecessary images.
+  - [ ] Templates contain references to email addresses.  Clean them up and
+    implement a feedback form where people can input information (human
+    verified with a captcha).
+  - [ ] Current templates are not HTML minified. These will be minified at
+    build time now.
+  - [ ] Do not forget to copy keywords from base template when writing the
+    new templates.
+  - [ ] Set up models for [0/5]
+    - [ ] Management
+      - Full name
+      - Designation
+      - [ ] Academic qualifications (reference property)
+        - Certification/award title
+        - Institution
+        - Year
+        - Location
+        - Description
+      - [ ] Work experience profile
+        - Description
+        - link to profile on linkedin (optional)
+      - [ ] Other directorships (companies; reference property)
+        - company name
+        - designation/title
+        - url
+    - [ ] Financials
+      - [ ] Annual report
+        - Year
+        - url
+      - [ ] Asset liability statement
+        - year range
+        - revenue unit (millions, thousands)
+        - share capital
+        - reserves and surplus
+        - secured loans
+        - total liabilities
+        - fixed assets
+        - investments
+        - net current assets
+        - total assets
+      - [ ] Income statement
+        - year range
+        - revenue unit (millions, thousands)
+        - total revenue
+        - pbdit
+        - depreciation
+        - interest
+        - tax provision
+        - pat
+        - eps (inr)
+    - [ ] Fleet specifications
+      - Need to ask for data fields
+    - [ ] Press release articles (what's new uses this for titles)
+      - title
+      - place
+      - date
+      - description
+    - [ ] Feed back comments
+  - [ ] ReportLab PDF lib inclusion to generate fleet spec PDFs from fleet
+    specification models.
+  - [ ] Press release articles are currently non-shareable--add a feature
+    to share the article via email, messaging, tweets, status, etc.
+
+* TODO Implement a CMS for the above models. [0/3]
+  - [ ] Convert existing admin to use closure
+  - [ ] Create handlers for each model (preferably generated)
+  - [ ] Create scripts and templates for each section
