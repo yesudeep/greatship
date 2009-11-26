@@ -4,7 +4,7 @@
 *.bak
 *.swp
 *.log
-
+\#*
 .sconsign.dblite
 
 # Mac OS X temporary files.
@@ -31,4 +31,3 @@ app/templates
 templates/*.pkl
 templates/_build
 media/css/screen.css
-
