@@ -1,20 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Main handlers. 
+# Main handlers.
 # Copyright (c) 2009 happychickoo.
 #
 # The MIT License
-# 
+#
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
 # in the Software without restriction, including without limitation the rights
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-# 
+#
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -28,11 +28,14 @@ from gaefy.db.datastore_cache import DatastoreCachingShim
 from google.appengine.ext import db, webapp
 from google.appengine.api import memcache
 from google.appengine.ext.webapp.util import run_wsgi_app
-from utilities import render_template
+from gaefy.jinja2.code_loaders import FileSystemCodeLoader
+from haggoo.template.jinja2 import render_generator
 import logging
 
 # Set up logging.
 logging.basicConfig(level=logging.DEBUG)
+
+render_template = render_generator(loader=FileSystemCodeLoader, builtins=configuration.TEMPLATE_BUILTINS)
 
 # Handlers
 class IndexHandler(webapp.RequestHandler):
