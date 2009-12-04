@@ -5,12 +5,15 @@
 *.swp
 *.log
 \#*\#
+.\#*
 .sconsign.dblite
+
 
 # Mac OS X temporary files.
 .DS_Store
 __MACOSX__
 ._*
+.localized
 
 # Windows temporary files.
 Thumbs.db
@@ -30,4 +33,8 @@ app/public
 app/templates
 templates/*.pkl
 templates/_build
+templates/_build_min
 media/css/screen.css
+
+# Confidential files that should be ignored
+app/api_preferences.py

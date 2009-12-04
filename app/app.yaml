@@ -10,7 +10,7 @@ handlers:
   static_dir: public
   secure: never
   expiration: 10s
-    
+
 - url: /favicon.ico
   static_files: public/image/icon/favicon.png
   upload: public/image/icon/favicon.png
@@ -21,7 +21,7 @@ handlers:
   upload: public/robots.txt
   expiration: 7d
   secure: never
-  
+
 - url: /console/static/
   static_dir: console/app/view/static
   expiration: 7d
@@ -32,3 +32,17 @@ handlers:
 
 - url: /.*
   script: handlers.py
+
+skip_files: |
+  ^(.*/)?(
+  (app\.yaml)|
+  (app\.yml)|
+  (index\.yaml)|
+  (index\.yml)|
+  (#.*#)|
+  (.*~)|
+  (.*\.py[co])|
+  (.*\.bak)|
+  (.*\.gitignore)|
+  (\..*)
+  )$
