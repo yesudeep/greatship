@@ -1,5 +1,5 @@
-application: for-fun
-version: latest
+application: greatshipgroup
+version: development
 runtime: python
 api_version: 1
 
