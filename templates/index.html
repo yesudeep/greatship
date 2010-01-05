@@ -1,6 +1,35 @@
 {% extends "base.html" %}
 
+<!-- Main Body -->
 {% block tag_trunk_content %}
 
+<!-- Page Heading -->
+<h1 class="tagline">Energy and offshore services. <strong>Worldwide.</strong></h1>
+<div id="try"></div>
+
+<ul class="features">
+        <li>
+            <a  id="fleet" href="/services/fleet/" title="View our fleet specifications" alt=""><img class="point" src="{{MEDIA_URL}}image/icon/ship_model.png" alt="Fleet" /></a>
+            
+        </li>
+        <li>
+            <a  id="safety" href="/services/qhse/" title="Quality, health, safety, and environment" alt=""><img class="point" src="{{MEDIA_URL}}image/icon/safety_helmet.png" alt="Safety" /></a>
+        </li>
+        <li>
+            <a  id="construction" href="/services/construction/" title="Offshore construction" alt=""><img class="point" src="{{MEDIA_URL}}image/icon/mohini.png" alt="Construction" /></a>
+        </li>
+        <li>
+            <a  id="drilling" href="/services/drilling/" title="Drilling services" alt=""><img class="point" src="{{MEDIA_URL}}image/icon/drill_new.png" alt="Drilling" /></a>
+        </li>
+        <li>
+            <a  id="logistics" href="/services/logistics/" title="Offshore logistics" alt=""><img class="point" src="{{MEDIA_URL}}image/icon/ship_side.png" alt="Logistics" /></a>
+        </li>
+        <li>
+            <div class="description"><a href="/about/motto/">Passion Fuels Performance</a></div>
+        </li>
+    </ul>
+    
 {% endblock %}
+
+
 

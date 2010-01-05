@@ -43,10 +43,52 @@ class IndexHandler(webapp.RequestHandler):
     def get(self):
         response = render_template('index.html')
         self.response.out.write(response)
+        
+class FleetServiceHandler(webapp.RequestHandler):
+    """Handles the home page requests."""
+    def get(self):
+        response = render_template('fleet.html')
+        self.response.out.write(response)
+        
+class LogisticsServiceHandler(webapp.RequestHandler):
+    """Handles the home page requests."""
+    def get(self):
+        response = render_template('logistics.html')
+        self.response.out.write(response)                        
+        
+class ConstructionServiceHandler(webapp.RequestHandler):
+    """Handles the home page requests."""
+    def get(self):
+        response = render_template('construction.html')
+        self.response.out.write(response)            
 
+class DrillingServiceHandler(webapp.RequestHandler):
+    """Handles the home page requests."""
+    def get(self):
+        response = render_template('drilling.html')
+        self.response.out.write(response)
+        
+class QHSEServiceHandler(webapp.RequestHandler):
+    """Handles the home page requests."""
+    def get(self):
+        response = render_template('qhse.html')
+        self.response.out.write(response)
+
+class OfficesContactHandler(webapp.RequestHandler):
+    """Handles the home page requests."""
+    def get(self):
+        response = render_template('contacts.html')
+        self.response.out.write(response)
+                        
 # URL-to-request-handler mappings.
 urls = (
     ('/', IndexHandler),
+    ('/services/fleet/?', FleetServiceHandler),
+    ('/services/logistics/?', LogisticsServiceHandler),
+    ('/services/construction/?', ConstructionServiceHandler),
+    ('/services/drilling/?', DrillingServiceHandler),
+    ('/services/qhse/?', QHSEServiceHandler),
+    ('/contact/offices/?', OfficesContactHandler),
 )
 
 # Web application entry-point.

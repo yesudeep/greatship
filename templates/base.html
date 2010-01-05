@@ -14,10 +14,39 @@
 		{% block tag_header %}
 		<div id="header">
 			{% block tag_header_content %}
-			{% endblock %}
-			{% block tag_header_additional_content %}
-			{% endblock %}
-		</div>
+                <div id="header_inner">
+                {% block header_inner_content %}
+                    <a href="/"><img class="logo" src="{{MEDIA_URL}}image/logo/logo-trans.png" alt="The Greatship Group Logo" title="The Greatship Group Logo" />
+                    <img class="logo-text" src="{{ MEDIA_URL }}image/logo/text.en_US-trans.png" alt="The Greatship Group" title="The Greatship Group" />
+                    </a>
+                    
+                    <a id="sticky_note" href="/careers/" alt="Careers"><img src="{{MEDIA_URL}}image/logo/note.png" alt="We're hiring!" /></a>
+                    
+                    <ul class="navlinks">
+                        <li>
+                        <a href="/" alt="Home"><img src="{{ MEDIA_URL }}image/logo/home_glass.png" alt="Home" title="Home" /></a>
+                        </li>
+                        <li>
+                        <a href="/services/fleet/" alt=""><img src="{{ MEDIA_URL }}image/logo/ship_model.png" alt="Fleet" title="Fleet" /></a>
+                        </li>
+                        <li>
+                        <a href="/services/logistics/" alt=""><img src="{{ MEDIA_URL }}image/logo/ship_side.png" alt="Logistics" title="Offshore Logistics" /></a>
+                        </li>
+                        <li>
+                        <a href="/services/construction/" alt=""><img src="{{ MEDIA_URL }}image/logo/mohini.png" alt="Construction" title="Offshore Construction" /></a>
+                        </li>
+                        <li>
+                        <a href="/services/drilling/" alt=""><img src="{{ MEDIA_URL }}image/logo/drill_new.png" alt="Drilling" title="Offshore Drilling" /></a>
+                        </li>
+                        <li><a href="/services/qhse/" alt=""><img src="{{ MEDIA_URL }}image/logo/safety_helmet.png" alt="QHSE" title="QHSE" /></a></li>
+                        <li><a href="/contact/offices/" alt="Contacts"><img src="{{ MEDIA_URL }}image/logo/phone.png" alt="contact" title="Contact us" /></a></li>
+                    </ul>
+                {% endblock %}
+                </div>
+                {% endblock %}
+                {% block tag_header_additional_content %}
+			    {% endblock %}
+            </div>
 		{% endblock %}
 		{% block tag_trunk %}
 		<div id="trunk">
