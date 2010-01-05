@@ -18,7 +18,23 @@ SCRIPT_FILES = Split("""
 """)
 
 IMAGE_FILES = Split("""
+    image/logo/logo-trans.png
+    image/logo/text.en_US-trans.png
+    image/logo/note.png
+    image/logo/home_glass.png
+    image/logo/ship_model.png
+    image/logo/ship_side.png
+    image/logo/mohini.png
+    image/logo/drill_new.png
+    image/logo/safety_helmet.png
+    image/logo/phone.png
+    image/bg/vertical-trans.png
     image/icon/favicon.png
+    image/icon/ship_model.png
+    image/icon/safety_helmet.png
+    image/icon/mohini.png
+    image/icon/ship_side.png
+    image/icon/drill_new.png
 """)
 
 CSS_FILES = Split("""
