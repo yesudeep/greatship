@@ -23,6 +23,12 @@ HTML_FILES = Split("""
     construction.html
     drilling.html
     contacts.html
+    qhse.html
+    careers.html
+    tour.html
+    photobrowser.html
+    policy.html
+    press_release.html
 """)
 
 TEMPLATE_FILES = HTML_FILES + Split("""

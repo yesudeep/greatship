@@ -80,9 +80,37 @@ class OfficesContactHandler(webapp.RequestHandler):
         response = render_template('contacts.html')
         self.response.out.write(response)
                         
+class CareerHandler(webapp.RequestHandler):
+    """Handles the home page requests."""
+    def get(self):
+        response = render_template('careers.html')
+        self.response.out.write(response)
+
+class TourHandler(webapp.RequestHandler):
+    """Handles the home page requests."""
+    def get(self):
+        response = render_template('tour.html')
+        self.response.out.write(response)
+        
+class PolicyHandler(webapp.RequestHandler):
+    """Handles the home page requests."""
+    def get(self):
+        response = render_template('policy.html')
+        self.response.out.write(response)
+        
+class PressReleaseHandler(webapp.RequestHandler):
+    """Handles the home page requests."""
+    def get(self):
+        response = render_template('press_release.html')
+        self.response.out.write(response)          
+
 # URL-to-request-handler mappings.
 urls = (
     ('/', IndexHandler),
+    ('/careers/?', CareerHandler),
+    ('/policy/?', PolicyHandler),
+    ('/press_release/?', PressReleaseHandler),
+    ('/careers/tour/?', TourHandler),
     ('/services/fleet/?', FleetServiceHandler),
     ('/services/logistics/?', LogisticsServiceHandler),
     ('/services/construction/?', ConstructionServiceHandler),

@@ -1,0 +1,32 @@
+{% extends "base.html" %}<!-- Photobrowser extends base.html -->
+
+<!-- Main Body -->
+{% block tag_trunk_content %}
+<h1 class="tagline">{% block tagline %}{% endblock %}</h1>
+<div class="roundbox">
+	<div class="photobrowser">
+	    <div id="navigation" class="navigation">
+	        <ul class="thumbs noscript">
+                {% block photo_thumbs %}
+                {% endblock %}
+	        </ul>
+	    </div>
+	    <div id="gallery" class="content">
+	        <div id="controls" class="controls">
+	        </div>
+	        <div id="slideshow" class="slideshow">
+	        </div>
+	        <div id="details" class="embox">
+	            <div id="image-title" class="image-title">
+	            </div>
+	            <div id="image-desc" class="image-desc">
+	            </div>
+	        </div>
+	    </div>
+    </div>
+	{% block other_content %}{% endblock %}
+</div>
+{% endblock %}
+
+
+

@@ -35,6 +35,67 @@ IMAGE_FILES = Split("""
     image/icon/mohini.png
     image/icon/ship_side.png
     image/icon/drill_new.png
+    image/icon/onshore_professional.png
+    image/button/take_tour.png
+    image/button/send_resume_glossy-trans.png
+    image/photo/career/1.jpg
+    image/photo/career/2.jpg
+    image/photo/career/3.jpg
+    image/photo/career/4.jpg
+    image/photo/career/5.jpg
+    image/photo/career/6.jpg
+    image/photo/career/7.jpg
+    image/photo/career/8.jpg
+    image/photo/career/9.jpg
+    image/photo/career/10.jpg
+    image/photo/career/11.jpg
+    image/photo/career/12.jpg
+    image/photo/career/13.jpg
+    image/photo/career/14.jpg
+    image/photo/career/15.jpg
+    image/photo/career/16.jpg
+    image/photo/career/18.jpg
+    image/photo/career/19.jpg
+    image/photo/career/20.jpg
+    image/photo/career/22.jpg
+    image/photo/career/23.jpg
+    image/photo/career/24.jpg
+    image/photo/career/25.jpg
+    image/photo/career/26.jpg
+    image/photo/career/27.jpg
+    image/photo/career/29.jpg
+    image/photo/career/30.jpg
+    image/photo/career/31.jpg
+    image/photo/career/32.jpg
+    image/photo/career/thumbs/1.jpg
+    image/photo/career/thumbs/2.jpg
+    image/photo/career/thumbs/3.jpg
+    image/photo/career/thumbs/4.jpg
+    image/photo/career/thumbs/5.jpg
+    image/photo/career/thumbs/6.jpg
+    image/photo/career/thumbs/7.jpg
+    image/photo/career/thumbs/8.jpg
+    image/photo/career/thumbs/9.jpg
+    image/photo/career/thumbs/10.jpg
+    image/photo/career/thumbs/11.jpg
+    image/photo/career/thumbs/12.jpg
+    image/photo/career/thumbs/13.jpg
+    image/photo/career/thumbs/14.jpg
+    image/photo/career/thumbs/15.jpg
+    image/photo/career/thumbs/16.jpg
+    image/photo/career/thumbs/18.jpg
+    image/photo/career/thumbs/19.jpg
+    image/photo/career/thumbs/20.jpg
+    image/photo/career/thumbs/22.jpg
+    image/photo/career/thumbs/23.jpg
+    image/photo/career/thumbs/24.jpg
+    image/photo/career/thumbs/25.jpg
+    image/photo/career/thumbs/26.jpg
+    image/photo/career/thumbs/27.jpg
+    image/photo/career/thumbs/29.jpg
+    image/photo/career/thumbs/30.jpg
+    image/photo/career/thumbs/31.jpg
+    image/photo/career/thumbs/32.jpg
 """)
 
 CSS_FILES = Split("""
